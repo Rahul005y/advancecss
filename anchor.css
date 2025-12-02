@@ -1,0 +1,53 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+   
+   anchor-name: --active;
+}
+
+/* boxes with normal background colors */
+#box1{ background: blue; }
+#box2{ background: green; }
+#box3{ background: teal; }
+#box4{ background: pink; }
+
+.box{
+  color: white;
+  padding: 15px 25px;
+  font-size: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+ 
+}
+
+
+.anchor{
+  position: absolute;
+  position-anchor: --active;
+  background-color: rgb(156, 14, 73);
+  left: anchor(left);
+  right:anchor(right);
+  top: anchor(top);
+  bottom: anchor(bottom);
+  pointer-events: none;
+  transition: 0.3s ease;
+  border-radius: 10px;
+  mix-blend-mode: difference;
+}
+
+
+.box:hover{
+  anchor-name: --active;
+}
+
